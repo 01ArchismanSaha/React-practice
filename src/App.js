@@ -35,10 +35,10 @@ function App() {
   const expenseList = expenses.map((expense) => {
     return <ExpenseItem
       key = {expense.id}
-      title={expense.title}
-      amount={expense.amount}
-      date={expense.date}
-      location={expense.location}
+      title = {expense.title}
+      amount = {expense.amount}
+      date = {expense.date}
+      location = {expense.location}
     ></ExpenseItem>;
   });
 
