@@ -8,8 +8,10 @@ function ExpenseList(props) {
   return (
     <Card className="expenses">
       {expenses.map((expense) => {
+        // console.log(expense.id)
         return (
           <ExpenseItem
+            id= {expense.id}
             key={expense.id}
             title={expense.title}
             amount={expense.amount}
