@@ -15,10 +15,14 @@ export function ExpenseItem(props) {
   //   toDelete.remove();
   //   // console.log(toDelete);
   // };
+  const datKey = Math.random();
+  const detailKey = Math.random();
+  const cardKey = Math.random();
   return (
-    <Card className="expense-item">
-      <ExpenseDate date={props.date} />
+    <Card key={cardKey} className="expense-item">
+      <ExpenseDate date={props.date} key={datKey}/>
       <ExpenseDetails
+        key={detailKey}
         title={props.title}
         amount={props.amount}
         location={props.location}
