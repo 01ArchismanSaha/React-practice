@@ -12,14 +12,17 @@ function ExpenseList(props) {
   const filterChangeHandler = (selectedYear) => {
     setSelectedYear(selectedYear);
   };
-  // console.log(expenses);
+  
+  const filteredExpenses = expenses.filter(
+    (expense) => expense.date.getFullYear().toString() === selectedYearInFilter
+  );
   return (
     <Card className="expenses">
       <ExpensesFilter
         selectedYearValue={selectedYearInFilter}
         onFilterChange={filterChangeHandler}
       />
-      {expenses.map((expense) => {
+      {filteredExpenses.map((expense) => {
         // console.log(expense.id)
         return (
           <ExpenseItem
