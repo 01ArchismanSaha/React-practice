@@ -23,7 +23,7 @@ const ExpenseForm = (props) => {
 
     const expenseData = {
       title: changedTitle,
-      amount: changedAmount,
+      amount: +changedAmount,
       date: new Date(changedDate),
     };
     
